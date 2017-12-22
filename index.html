@@ -17,11 +17,10 @@
 	
 	function comprobarPrimo(){
 		esPrimo=true;
-		var numero = parseInt(window.prompt("Introduce un n�mero:                 Puntuaci�n: "+ contador));
+		var numero = parseInt(window.prompt("Introduce un número:                 Puntuación: "+ contador));
 		var mitad = Math.round(numero/2);
 
 		if(numero!=null && !isNaN(numero)){
-			/* console.log("hola"); */
 			for(var i = 2; i <= mitad && esPrimo == true; i++){
 				if(numero%i==0) esPrimo = false;
 			}
@@ -29,7 +28,7 @@
 		
 		if(esPrimo)contador++;
 		else{
-			window.alert("Tu puntuación es "+contador);
+			window.alert("Tu puntuaciÃ³n es "+contador);
 			contador=0;
 			}
 	}
