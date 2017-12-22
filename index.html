@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Numeros primos</title>
 </head>
 <script type="text/javascript">
 	
-	var esPrimo = true;
 	var contador=0;
-
 
 	function empezarJuego(){
 		do{
@@ -20,7 +19,7 @@
 		var numero = parseInt(window.prompt("Introduce un número:                 Puntuación: "+ contador));
 		var mitad = Math.round(numero/2);
 
-		if(numero!=null && !isNaN(numero)){
+		if(numero!=null && !isNaN(numero) && numero!=1 && numero!=2){
 			for(var i = 2; i <= mitad && esPrimo == true; i++){
 				if(numero%i==0) esPrimo = false;
 			}
@@ -28,7 +27,7 @@
 		
 		if(esPrimo)contador++;
 		else{
-			window.alert("Tu puntuaciÃ³n es "+contador);
+			window.alert("Tu puntuación es "+contador);
 			contador=0;
 			}
 	}
